@@ -15,3 +15,8 @@ services:
       - ${MYSQL_DATA}:/www/server/data
       - ${VHOST_DATA}:/www/server/panel/vhost
       - ${WEBSITE_LOG}:/www/wwwlogs
+  redis:
+    container_name: 'redis-service'
+    image: redis:latest
+    ports:
+      - "${REDIS_PORT}:6379"
