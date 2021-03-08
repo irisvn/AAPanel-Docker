@@ -9,3 +9,4 @@
 <b>Port usage analysis</b>
 - Control Panel: 8888
 - Phpmyadmin: 888
+- Redis Service: 6379
