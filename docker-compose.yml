@@ -14,5 +14,4 @@ services:
     volumes: 
       - ${WEBSITE_DATA}:/www/wwwroot
       - ${MYSQL_DATA}:/www/server/data
-      - ${VHOST_DATA}:/www/server/panel/vhost
       - ${WEBSITE_LOG}:/www/wwwlogs
