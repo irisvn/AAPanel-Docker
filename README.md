@@ -3,8 +3,9 @@
 
 - AAPanel homepage: https://www.aapanel.com
 - Docker source: https://hub.docker.com/r/aapanel/aapanel
-- Default username: aapanel
-- Default password: aapanel
+- Default installation entry:aapanel => exp: http://localhost:9999/aapenel
+- Default username:aapanel
+- Default password:aapanel123
 
 <b>Port usage analysis</b>
 - Control Panel: 8888
