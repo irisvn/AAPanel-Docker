@@ -1,15 +1,13 @@
-FROM aapanel/aapanel:lib
+FROM aapanel/aapanel:lnmp
 
 USER root
 
 RUN su
-# RUN yum -y update && yum upgrade -y
+RUN yum -y update
+RUN mv /www/server/panel/pyenv/lib/python3.7/site-packages/OpenSSL /tmp/OpenSSL_bak
+RUN btpip install pyOpenSSL
 
 # Update AAPanel
 RUN bt 16
-
-# Reload AAPanel
-RUN bt 1
-RUN bt 9
 
 WORKDIR /www/
