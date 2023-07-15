@@ -2,7 +2,6 @@ version: "3"
 
 services:
   aapanel:
-    # platform: linux/x86_64
     build: 
       context: ./bin/aapanel
     container_name: "aapanel-webserver"
@@ -11,7 +10,8 @@ services:
       - "${WEBSERVER_HOST_PORT}:80"
       - "${WEBSERVER_SECURE_HOST_PORT}:443"
       - "${PHPMYADMIN_PORT}:888"
+      - "${REDIS_PORT}:6379"
     volumes: 
       - ${WEBSITE_DATA}:/www/wwwroot
-      - ${MYSQL_DATA}:/www/server/data
+      - ${SERVER_DATA}:/www/server
       - ${WEBSITE_LOG}:/www/wwwlogs
