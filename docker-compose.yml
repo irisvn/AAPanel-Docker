@@ -13,5 +13,4 @@ services:
       - "${REDIS_PORT}:6379"
     volumes: 
       - ${WEBSITE_DATA}:/www/wwwroot
-      - ${SERVER_DATA}:/www/server
       - ${WEBSITE_LOG}:/www/wwwlogs
